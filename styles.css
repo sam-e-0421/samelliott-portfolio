@@ -286,6 +286,41 @@ section {
     mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
 }
 
+.hero-plane {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    color: var(--color-accent);
+    opacity: 0;
+    animation: flyAcross 15s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes flyAcross {
+    0% {
+        opacity: 0;
+        top: 30%;
+        left: -10%;
+        transform: rotate(-5deg);
+    }
+    10% {
+        opacity: 0.5;
+    }
+    50% {
+        top: 25%;
+        transform: rotate(0deg);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        top: 20%;
+        left: 110%;
+        transform: rotate(5deg);
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -386,6 +421,17 @@ section {
 
 .btn-full {
     width: 100%;
+}
+
+.btn-tertiary {
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.btn-tertiary:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
 }
 
 /* Hero Stats */
@@ -1123,10 +1169,128 @@ section {
 }
 
 /* ============================================
+   HOBBIES SECTION
+   ============================================ */
+.hobbies {
+    background: var(--color-bg);
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hobby-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.hobby-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.hobby-icon {
+    font-size: 2rem;
+}
+
+.hobby-card h4 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================
+   GALLERY SECTION
+   ============================================ */
+.gallery {
+    background: var(--color-bg-elevated);
+}
+
+.gallery-grid {
+    columns: 3;
+    column-gap: var(--space-md);
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: var(--space-md);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        columns: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        columns: 1;
+    }
+}
+
+/* ============================================
    CONTACT SECTION
    ============================================ */
 .contact {
-    background: var(--color-bg-elevated);
+    background: var(--color-bg);
 }
 
 .contact-content {
