@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initAnimations();
     initMobileMenu();
-    initContactForm();
 });
 
 // ============================================
@@ -129,22 +128,6 @@ function initAnimations() {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
     });
-}
-
-// ============================================
-// CONTACT FORM
-// ============================================
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    
-    if (form) {
-        // Show loading state on submit (Formspree handles the actual submission)
-        form.addEventListener('submit', () => {
-            const submitBtn = form.querySelector('button[type="submit"]');
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-        });
-    }
 }
 
 // ============================================

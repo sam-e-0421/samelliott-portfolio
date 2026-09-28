@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam Elliott | Sales Professional • Builder • Pilot</title>
+    <title>Sam Elliott | CFI • CFII • MEI — Flight Instructor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=8">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -17,9 +17,9 @@
             <a href="#hero" class="nav-logo">SE</a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#aviation">Aviation</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#aviation">Aviation</a>
                 <a href="#contact" class="nav-cta">Get in Touch</a>
             </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -33,9 +33,9 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#about">About</a>
+        <a href="#aviation">Aviation</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#aviation">Aviation</a>
         <a href="#contact">Get in Touch</a>
     </div>
 
@@ -44,21 +44,45 @@
         <div class="hero-background">
             <div class="hero-gradient"></div>
             <div class="hero-grid"></div>
-            <svg class="hero-plane" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M95 25L75 20L25 22L5 15L8 25L5 35L25 28L75 30L95 25Z" fill="currentColor" opacity="0.6"/>
-                <path d="M30 22L30 10L35 15L35 23" fill="currentColor" opacity="0.4"/>
+            <svg class="hero-plane" viewBox="0 0 260 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="contrail" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0" stop-color="currentColor" stop-opacity="0"/>
+                        <stop offset="1" stop-color="currentColor" stop-opacity="0.35"/>
+                    </linearGradient>
+                </defs>
+                <rect x="0" y="42" width="44" height="2" rx="1" fill="url(#contrail)"/>
+                <g fill="currentColor">
+                    <!-- T-tail: stabilizer on top of a swept fin -->
+                    <path d="M18 7 L54 7 L50 11.5 L21 11.5 Z"/>
+                    <path d="M44 41 L72 40 L44 10 L31 10 Z"/>
+                    <!-- fuselage: slim boom, bubble canopy, tapered nose -->
+                    <path d="M44 40 L104 34 C118 32 132 26 150 23 C164 20.5 178 22 192 30 C206 35 222 40 234 43.5 C237 44.5 237 47.5 234 48.5 C216 53 190 55 160 55.5 C130 56 100 53 44 46.5 Z"/>
+                    <!-- wing -->
+                    <path d="M124 53 L182 50.5 L176 60 L116 61 Z"/>
+                    <!-- landing gear with wheel pants -->
+                    <rect x="146" y="58" width="3" height="7"/>
+                    <ellipse cx="148" cy="67" rx="9.5" ry="5.5"/>
+                    <rect x="211" y="50" width="3" height="10"/>
+                    <ellipse cx="212" cy="64" rx="7.5" ry="4.5"/>
+                    <!-- spinner and prop -->
+                    <path d="M234 43.5 L242 46 L234 48.5 Z"/>
+                    <ellipse cx="242" cy="46" rx="1.6" ry="13" opacity="0.45"/>
+                </g>
+                <!-- canopy glass -->
+                <path d="M118 34 C132 28 150 24.5 164 24.5 C178 24.5 188 28 196 33 L190 36 C176 30 156 29 138 32 C130 33.5 124 35 120 36 Z" fill="#fff" opacity="0.6"/>
             </svg>
         </div>
         <div class="hero-content">
             <div class="hero-badge animate-fade-up">Scottsdale, Arizona</div>
             <h1 class="hero-title animate-fade-up delay-1">
                 <span class="hero-name">Sam Elliott</span>
-                <span class="hero-tagline">Sales Professional. Builder. Pilot.</span>
+                <span class="hero-tagline">Certified Flight Instructor</span>
             </h1>
             <p class="hero-description animate-fade-up delay-2">
-                Relationship-driven sales professional with a track record of guiding clients
-                through complex, high-stakes decisions.
-                I also hold Commercial Pilot and Certified Flight Instructor certificates—and I bring that same calm, disciplined decision-making into every deal.
+                CFI/CFII/MEI at Flight Stars in Mesa, Arizona—instructing private, instrument, and
+                commercial students with a 100% checkride pass rate. Also a licensed Realtor
+                in the Scottsdale area.
             </p>
             <div class="hero-actions animate-fade-up delay-3">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -67,16 +91,16 @@
             </div>
             <div class="hero-stats animate-fade-up delay-4">
                 <div class="stat">
-                    <span class="stat-value">253+</span>
+                    <span class="stat-value">328+</span>
                     <span class="stat-label">Flight Hours</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-value">$10M+</span>
-                    <span class="stat-label">Closed Volume</span>
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Checkride Pass Rate</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-value">8+</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-value">MEI</span>
+                    <span class="stat-label">Multi-Engine Instructor</span>
                 </div>
             </div>
         </div>
@@ -91,39 +115,31 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">About Me</span>
-                <h2 class="section-title">Building Trust in High-Stakes Decisions<br>On Solid Ground—and in the Air</h2>
+                <h2 class="section-title">Building Confident Pilots<br>and Trusted Partnerships</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-lead">
-                        I'm a sales and real estate professional based in Scottsdale, Arizona.
-                        My career has been defined by one thing: <strong>helping people navigate
-                        complexity with confidence.</strong> I also hold Commercial Pilot and Certified
-                        Flight Instructor certificates—training that sharpened my focus, communication,
-                        and composure under pressure.
+                        I'm a CFI/CFII/MEI based in the Phoenix metro.
+                        <strong>Helping people earn their wings is what drives me.</strong>
                     </p>
                     <p>
-                        Whether I'm working a negotiation, building a pipeline, or advising a client
-                        through a major decision, my approach is the same—listen carefully,
-                        communicate clearly, and follow through.
+                        At Flight Stars in Mesa, I instruct private, instrument, and commercial
+                        students in both single and multi-engine aircraft—building safe, confident
+                        pilots from day one. 100% checkride pass rate across all students.
                     </p>
                     <p>
-                        Outside of work, I'm building in aviation training—tools that help pilots
-                        train smarter. I believe AI can make training more accessible, adaptive,
-                        and effective.
+                        Outside the cockpit, I'm a licensed Realtor in Scottsdale and enjoy
+                        building web projects on the side. But aviation is home.
                     </p>
                     <div class="about-certs">
                         <div class="cert">
-                            <span class="cert-icon">🏠</span>
-                            <span>Licensed Realtor</span>
+                            <span class="cert-icon">✈</span>
+                            <span>CFI / CFII / MEI</span>
                         </div>
                         <div class="cert">
                             <span class="cert-icon">🎓</span>
                             <span>B.S. Business</span>
-                        </div>
-                        <div class="cert">
-                            <span class="cert-icon">✈</span>
-                            <span>CFII</span>
                         </div>
                     </div>
                 </div>
@@ -137,26 +153,129 @@
         </div>
     </section>
 
+    <!-- Aviation Section -->
+    <section class="aviation" id="aviation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Aviation</span>
+                <h2 class="section-title">Life in the Cockpit</h2>
+            </div>
+            <div class="aviation-content">
+                <div class="aviation-intro">
+                    <p>
+                        I earned my CFI, CFII, and MEI after training at Sierra Charlie Aviation
+                        in Scottsdale. Now I instruct at Flight Stars in Mesa—building safe,
+                        confident pilots from private through commercial, single and multi-engine.
+                        100% checkride pass rate across all students.
+                    </p>
+                </div>
+                <div class="flight-stats">
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">328</span>
+                        <span class="flight-stat-label">Total Time</span>
+                    </div>
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">49</span>
+                        <span class="flight-stat-label">Dual Given</span>
+                    </div>
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">83</span>
+                        <span class="flight-stat-label">Cross Country</span>
+                    </div>
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">71</span>
+                        <span class="flight-stat-label">Instrument</span>
+                    </div>
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">30</span>
+                        <span class="flight-stat-label">Multi-Engine</span>
+                    </div>
+                    <div class="flight-stat">
+                        <span class="flight-stat-value">15</span>
+                        <span class="flight-stat-label">Multi PIC</span>
+                    </div>
+                </div>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <span class="cert-badge">CFI</span>
+                        <h4>Certified Flight Instructor</h4>
+                    </div>
+                    <div class="certification-card">
+                        <span class="cert-badge">CFII</span>
+                        <h4>Instrument Instructor</h4>
+                    </div>
+                    <div class="certification-card">
+                        <span class="cert-badge">MEI</span>
+                        <h4>Multi-Engine Instructor</h4>
+                    </div>
+                </div>
+                <div class="aviation-skills">
+                    <h4>Proficiencies</h4>
+                    <div class="skills-list">
+                        <span class="skill">G1000 Glass Cockpit</span>
+                        <span class="skill">IFR Flight Planning</span>
+                        <span class="skill">ForeFlight</span>
+                        <span class="skill">Class B/C/D Operations</span>
+                        <span class="skill">High Density Altitude Ops</span>
+                        <span class="skill">Crosswind & Gusty Conditions</span>
+                        <span class="skill">Turbo Props</span>
+                        <span class="skill">Counter-Rotating Twins</span>
+                        <span class="skill">Weather Analysis</span>
+                        <span class="skill">Risk Management</span>
+                        <span class="skill">ADM</span>
+                    </div>
+                </div>
+                <div class="aviation-skills">
+                    <h4>Aircraft</h4>
+                    <div class="skills-list">
+                        <span class="skill">Cessna 172</span>
+                        <span class="skill">Cessna 182</span>
+                        <span class="skill">Diamond DA40</span>
+                        <span class="skill">Diamond DA42</span>
+                        <span class="skill">Piper Seminole</span>
+                        <span class="skill">PC12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Experience</span>
-                <h2 class="section-title">Where I've Made<br>an Impact</h2>
+                <h2 class="section-title">Career Timeline</h2>
             </div>
             <div class="experience-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">2021 — Present</span>
-                            <h3 class="timeline-title">Russ Lyon Sotheby's International Realty</h3>
+                            <span class="timeline-date">2026 — Present</span>
+                            <h3 class="timeline-title">Flight Stars</h3>
+                            <span class="timeline-location">Mesa, AZ</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Instruct private and instrument students in G1000-equipped aircraft — maneuvers, landings, radio work, and cross-country planning</li>
+                            <li>Break every maneuver down into its core components and build them back up step by step, so students understand the why behind each input rather than memorizing a sequence</li>
+                            <li>Run pre- and post-flight ground for every lesson and prepare students for stage checks and practical tests</li>
+                            <li>Operate daily in Phoenix Class B/C/D airspace and summer density altitude, teaching students to plan around performance limits and afternoon convection</li>
+                            <li>100% checkride pass rate across all students</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2023 — 2025</span>
+                            <h3 class="timeline-title">Sierra Charlie Aviation — Flight Training</h3>
                             <span class="timeline-location">Scottsdale, AZ</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Closed over $10M in residential transaction volume</li>
-                            <li>Built long-term client relationships through trust and consistent follow-up</li>
-                            <li>Managed complex negotiations while preserving positive relationships</li>
+                            <li>Completed accelerated professional flight training program</li>
+                            <li>Earned PPL, Instrument Rating, Commercial SEL & MEL, CFI, CFII, and MEI certifications</li>
                         </ul>
                     </div>
                 </div>
@@ -164,14 +283,12 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">2019 — 2021</span>
-                            <h3 class="timeline-title">Cushman Wakefield</h3>
-                            <span class="timeline-location">Omaha, NE</span>
+                            <span class="timeline-date">2021 — Present</span>
+                            <h3 class="timeline-title">Licensed Real Estate Agent</h3>
+                            <span class="timeline-location">Russ Lyon Sotheby's International Realty · Scottsdale, AZ</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>Developed consultative selling skills through active listening</li>
-                            <li>Refined pipeline management and time prioritization</li>
-                            <li>Strengthened negotiation and objection-handling skills</li>
+                            <li>Closed $11M+ in residential transaction volume across the Greater Scottsdale area</li>
                         </ul>
                     </div>
                 </div>
@@ -179,30 +296,14 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">2018 — 2019</span>
-                            <h3 class="timeline-title">Berkshire Hathaway HomeServices</h3>
-                            <span class="timeline-location">Omaha, NE</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Launched real estate career at premier brokerage</li>
-                            <li>Learned to explain complex information in simple, credible ways</li>
-                            <li>Managed personal sales pipeline using CRM tools</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-date">2014 — 2018</span>
-                            <h3 class="timeline-title">University of Nebraska — Lincoln</h3>
+                            <span class="timeline-date">2014 — 2020</span>
+                            <h3 class="timeline-title">Nebraska College of Business — University of Nebraska</h3>
                             <span class="timeline-location">Lincoln, NE</span>
                         </div>
                         <ul class="timeline-details">
-                            <li>B.S. in Business Management</li>
+                            <li>B.S. in Business Administration, Entrepreneurship</li>
                             <li>Vice President, Alpha Tau Omega Fraternity — elected by 120+ members</li>
                             <li>Head of Recruitment — led strategy that grew chapter membership</li>
-                            <li>Demonstrated early ability to build trust, lead peers, and manage teams</li>
                         </ul>
                     </div>
                 </div>
@@ -214,7 +315,7 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Projects</span>
+                <span class="section-label">Side Projects</span>
                 <h2 class="section-title">What I'm Building</h2>
             </div>
             <div class="projects-grid">
@@ -243,8 +344,8 @@
                         </div>
                         <h3 class="project-title">Airworthy</h3>
                         <p class="project-description">
-                            An AI-powered aviation training platform that makes studying for 
-                            checkrides smarter and more effective. Features spaced repetition 
+                            An AI-powered aviation training platform I built to help my students
+                            study smarter for checkrides. Features spaced repetition
                             algorithms, adaptive difficulty, and AI oral exam simulation.
                         </p>
                         <ul class="project-features">
@@ -267,93 +368,19 @@
                         </div>
                         <h3 class="project-title">This Website</h3>
                         <p class="project-description">
-                            You're looking at it. I designed and built this personal site from scratch 
-                            using modern web technologies—custom animations, responsive design, 
+                            You're looking at it. I designed and built this personal site from scratch
+                            using modern web technologies—custom animations, responsive design,
                             and clean, semantic code.
                         </p>
                         <ul class="project-features">
                             <li>Hand-crafted HTML, CSS & JavaScript</li>
                             <li>Fully responsive across all devices</li>
                             <li>Smooth scroll animations & interactions</li>
-                            <li>Aviation-inspired dark theme design</li>
+                            <li>Clean, aviation-inspired design</li>
                         </ul>
                         <a href="https://github.com/samelliott" target="_blank" class="project-cta">View on GitHub →</a>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Aviation Section -->
-    <section class="aviation" id="aviation">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Aviation</span>
-                <h2 class="section-title">Life in the Cockpit</h2>
-            </div>
-            <div class="aviation-content">
-                <div class="aviation-intro">
-                    <p>
-                        I earned my CFII in June 2025 after training at Sierra Charlie Aviation 
-                        in Scottsdale. Now I'm focused on building my aviation career while 
-                        helping new pilots gain confidence.
-                    </p>
-                </div>
-                <div class="flight-stats">
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">253</span>
-                        <span class="flight-stat-label">Total Time</span>
-                    </div>
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">169</span>
-                        <span class="flight-stat-label">PIC</span>
-                    </div>
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">83</span>
-                        <span class="flight-stat-label">Cross Country</span>
-                    </div>
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">71</span>
-                        <span class="flight-stat-label">Instrument</span>
-                    </div>
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">16</span>
-                        <span class="flight-stat-label">Multi-Engine</span>
-                    </div>
-                    <div class="flight-stat">
-                        <span class="flight-stat-value">18</span>
-                        <span class="flight-stat-label">Night</span>
-                    </div>
-                </div>
-                <div class="certifications-grid">
-                    <div class="certification-card">
-                        <span class="cert-badge">CFII</span>
-                        <h4>Certified Flight Instructor — Instrument</h4>
-                    </div>
-                    <div class="certification-card">
-                        <span class="cert-badge">CPL</span>
-                        <h4>Commercial Pilot License</h4>
-                    </div>
-                    <div class="certification-card">
-                        <span class="cert-badge">HP</span>
-                        <h4>High Performance Endorsement</h4>
-                    </div>
-                    <div class="certification-card">
-                        <span class="cert-badge">MEL</span>
-                        <h4>Multi-Engine Land</h4>
-                    </div>
-                </div>
-                <div class="aviation-skills">
-                    <h4>Proficiencies</h4>
-                    <div class="skills-list">
-                        <span class="skill">G1000 Glass Cockpit</span>
-                        <span class="skill">IFR Flight Planning</span>
-                        <span class="skill">Weather Analysis</span>
-                        <span class="skill">Risk Management</span>
-                        <span class="skill">Clear Communication</span>
-                        <span class="skill">ADM</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -445,8 +472,8 @@
                     <span class="section-label">Get in Touch</span>
                     <h2 class="section-title">Let's Connect</h2>
                     <p class="contact-description">
-                        Whether you're looking to connect about sales, real estate, partnerships,
-                        or aviation tech—I’d love to hear from you.
+                        Whether you’re looking to start flight training, have questions about
+                        learning to fly, or want to connect about anything else—I’d love to hear from you.
                     </p>
                     <div class="contact-details">
                         <a href="mailto:sfelliott4@gmail.com" class="contact-link">
@@ -471,24 +498,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mkoogywr" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <input type="hidden" name="_subject" value="New message from your portfolio site!">
-                        <input type="hidden" name="_next" value="https://samelliott.com/#contact">
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
+                <div class="contact-text-card">
+                    <span class="contact-text-label">Easiest way to reach me</span>
+                    <h3 class="contact-text-title">Shoot me a text</h3>
+                    <a href="sms:+14026589001" class="contact-text-number">402-658-9001</a>
+                    <p class="contact-text-note">
+                        Tell me a little about where you're at—brand new, mid-training, or
+                        looking to add a rating—and I'll get back to you between flights.
+                    </p>
                 </div>
             </div>
         </div>
@@ -499,7 +516,7 @@
         <div class="container">
             <div class="footer-content">
                 <span class="footer-logo">Sam Elliott</span>
-                <p class="footer-tagline">Sales Professional • Builder • Pilot</p>
+                <p class="footer-tagline">CFI • CFII • MEI</p>
                 <p class="footer-copyright">© 2026 Sam Elliott. All rights reserved.</p>
             </div>
         </div>
